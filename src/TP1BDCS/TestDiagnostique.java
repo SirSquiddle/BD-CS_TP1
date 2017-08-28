@@ -52,6 +52,8 @@ public class TestDiagnostique
 
                 }
                 System.out.println("le montant converti est "+montantConverti);
+                String montantTxt = Float.toString(montantConverti);
+                resultConv.setText(montantTxt);
             }
         });
 
