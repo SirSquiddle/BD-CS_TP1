@@ -2,6 +2,7 @@ package TP1BDCS;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class TestDiagnostique
 {
@@ -23,6 +24,8 @@ public class TestDiagnostique
         JButton validerConversion = new JButton("Convertir");
         JLabel resultConv = new JLabel("Résultat");
 
+        validerConversion.addActionListener();
+
 
         GridBagConstraints contrainte = new GridBagConstraints();
 
@@ -40,15 +43,24 @@ public class TestDiagnostique
         contrainte.gridy=2;
         panneauPrincipal.add(selectDevise, contrainte);
 
-        contrainte.gridx=1;
-        contrainte.gridy=1;
+        contrainte.gridx=0;
+        contrainte.gridy=3;
         panneauPrincipal.add(resultConv, contrainte);
 
-        contrainte.gridx=1;
-        contrainte.gridy=2;
+        contrainte.gridx=0;
+        contrainte.gridy=4;
         panneauPrincipal.add(validerConversion, contrainte);
 
         fenetre.setContentPane(panneauPrincipal);
         fenetre.setVisible(true);
+    }
+
+
+    public void actionPerformed(ActionEvent e) {
+       /*if(e.getSource()==validerConversion)
+       {
+
+       }*/
+       System.out.println(e.getSource());
     }
 }
